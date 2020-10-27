@@ -1,9 +1,9 @@
 
 
-<p align="center">
+
 ![alt text](https://imgur.com/a/NZcni8a)
 
-</p>
+
 
 ## About Welland Canal Bridge Status
 
