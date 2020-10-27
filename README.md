@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img src="https://github.com/Ethansteip/Welland-Canal-Status/blob/master/Screen%20Shot%202020-10-27%20at%209.29.59%20AM.png" width="500" title="hover text">
+  <img src="https://github.com/Ethansteip/Welland-Canal-Status/blob/master/Screen%20Shot%202020-10-27%20at%209.29.59%20AM.png" width="1000" title="hover text">
   
 </p>
 
