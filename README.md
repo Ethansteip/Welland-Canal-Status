@@ -1,8 +1,10 @@
 
 
 
-![alt text](https://imgur.com/a/NZcni8a)
-
+<p align="center">
+  <img src="https://imgur.com/a/NZcni8a" width="350" title="hover text">
+  
+</p>
 
 
 ## About Welland Canal Bridge Status
