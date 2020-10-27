@@ -15,8 +15,8 @@ Looking to add in functionality that will let you know for how long a brige may 
 
 Data for bridge status is pulled in from https://canalstatus.com/api/v1/bridges/
 
-Main files:
+<h1>Main files:</h1>
 
-Main webpage + bridge status requests --> /resources/views/bridge_status.blade.php
-Script for building database of bridge status's. Will be used for building model to approximate time bridges are up/down --> app/Models/insertdb.php
-Laravel scheduling:work script for inserting to db every minute --> /app/Console/Kernel.php
+<p>Main webpage + bridge status requests --> /resources/views/bridge_status.blade.php</p><br><br>
+<p>Script for building database of bridge status's. Will be used for building model to approximate time bridges are up/down --> app/Models/insertdb.php</p><br><br>
+<p>Laravel scheduling:work script for inserting to db every minute --> /app/Console/Kernel.php<p>
