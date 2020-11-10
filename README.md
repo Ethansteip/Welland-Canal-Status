@@ -18,5 +18,5 @@ Data for bridge status is pulled in from https://canalstatus.com/api/v1/bridges/
 <h1>Main files:</h1>
 
 <p>The main webpage + bridge status requests --> /resources/views/bridge_status.blade.php</p><br><br>
-<p>Script for building database of bridge status's. This is used for building a model to approximate the time bridges are up/down --> app/Models/insertdb.php</p><br><br>
+<p>Script for building database of bridge status's. This is used for building a model to approximate the time bridges are up/down --> app/Models/insertDBforEach.php</p><br><br>
 <p>Laravel schedule:work script for inserting bridge status's to db every minute --> /app/Console/Kernel.php<p>
