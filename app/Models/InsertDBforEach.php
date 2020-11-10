@@ -26,7 +26,7 @@ forEach($bridges as $val) {
   $bridgeStatus = $val['status']['status'];
   $bridgeName = $val['name'];
 
-  $sql = "INSERT INTO untitled_table_3(bridge_location, updated_at, bridge_status, bridge_name)
+  $sql = "INSERT INTO Bridge_status(bridge_location, updated_at, bridge_status, bridge_name)
   VALUES ('$bridgeLocation', '$updatedAt', '$bridgeStatus', '$bridgeName')";
 
   if ($conn->query($sql) === TRUE) {
