@@ -13,8 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('bridge_status');
-});
+Route::get('/', 'BridgeController@index');
 
 

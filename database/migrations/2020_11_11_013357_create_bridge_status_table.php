@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Bridges extends Migration
+class CreateBridgeStatusTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,12 @@ class Bridges extends Migration
      */
     public function up()
     {
-        Schema::create('bridge', function (Blueprint $table)
-        {
-            $table->increments('id');
+        Schema::create('bridge_status', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedInteger('status_id')->unique();
             $table->unsignedInteger('bridge_id');
-            $table->string('name');
-            $table->string('nickname');
-            $table->string('location');
-            $table->integer('order');
-            $table->integer('canal_id');
+            $table->string('status');
+            $table->integer('status_type');
             $table->timestamps();
         });
     }
@@ -33,6 +30,6 @@ class Bridges extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bridge');
+        Schema::dropIfExists('bridge_status');
     }
 }
