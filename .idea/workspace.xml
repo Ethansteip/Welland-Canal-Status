@@ -24,18 +24,13 @@
   <component name="ChangeListManager">
     <list default="true" id="7803d3e2-f262-4406-af82-f2b2f77bb7b8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/insertdb.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/insertdb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Bridge.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Bridge.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/InsertDBforEach.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/InsertDBforEach.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/BridgeStatusService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/BridgeStatusService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_10_234236_bridges.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_10_234236_bridges.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -194,7 +189,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605055615968</updated>
-      <workItem from="1605055617386" duration="6792000" />
+      <workItem from="1605055617386" duration="8071000" />
+      <workItem from="1605104595206" duration="16000" />
     </task>
     <servers />
   </component>
@@ -211,6 +207,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="638" y="199" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605057304200">
