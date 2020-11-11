@@ -16,7 +16,7 @@ class Bridges extends Migration
         Schema::create('bridge', function (Blueprint $table)
         {
             $table->increments('id');
-            $table->unsignedInteger('bridge_id');
+            $table->unsignedInteger('bridge_id')->unique();
             $table->string('name');
             $table->string('nickname');
             $table->string('location');

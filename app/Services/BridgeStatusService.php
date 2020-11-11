@@ -13,16 +13,19 @@ class BridgeStatusService
         $bridges = $json['bridges'];
 
         foreach($bridges as $bridge) {
-//            $b = new Bridge;
-//
-//            $b->bridge_id = $bridge['id'];
-//            $b->name = $bridge['name'];
-//            $b->nickname = $bridge['nickname'];
-//            $b->location = $bridge['location'];
-//            $b->order = $bridge['order'];
-//            $b->canal_id = $bridge['canal_id'];
-//
-//            $b->save();
+            Bridge::updateOrCreate(
+                [
+                    'bridge_id' => $bridge['id']
+                ],
+                [
+                    'bridge_id' => $bridge['id'],
+                    'name' => $bridge['name'],
+                    'nickname' => $bridge['nickname'],
+                    'location' => $bridge['location'],
+                    'order' => $bridge['order'],
+                    'canal_id' => $bridge['canal_id'],
+                ]
+            );
 
             $status = $bridge['status'];
 

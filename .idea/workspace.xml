@@ -23,16 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7803d3e2-f262-4406-af82-f2b2f77bb7b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Services/BridgeStatusService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/bridge/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/bridge/partials/bridge.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Bridges.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/insertdb.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/insertdb.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Bridge.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Bridge.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/InsertDBforEach.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/InsertDBforEach.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/BridgeStatusService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/BridgeStatusService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_10_234236_bridges.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_10_234236_bridges.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/bridge_status.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +194,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605055615968</updated>
-      <workItem from="1605055617386" duration="5604000" />
+      <workItem from="1605055617386" duration="6792000" />
     </task>
     <servers />
   </component>
@@ -237,9 +233,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="668" y="208" width="583" height="624" key="find.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605058975650" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605059541494">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605061897012">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605059541494" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605061897012" />
   </component>
 </project>

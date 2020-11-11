@@ -11,7 +11,7 @@ class Bridge extends Model
 
     protected $table = 'bridge';
 
-    protected $fillable = ['name', 'nickname', 'location', 'order', 'canal_id'];
+    protected $fillable = ['bridge_id', 'name', 'nickname', 'location', 'order', 'canal_id'];
 
     public function status()
     {

@@ -29,6 +29,9 @@ forEach($bridges as $val) {
   $sql = "INSERT INTO Bridge_status(bridge_location, updated_at, bridge_status, bridge_name)
   VALUES ('$bridgeLocation', '$updatedAt', '$bridgeStatus', '$bridgeName')";
 
+  DB::insert('INSERT INTO `bridge_status` (`bridge_location`, `updated_at`, `bridge_status`, `bridge_name`)
+  VALUES (?,?,?,?)', [$bridgeLocation, $updatedAt, $bridgeStatus, $bridgeName]);
+
   if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
     echo "\n";
