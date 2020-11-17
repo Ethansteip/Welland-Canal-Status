@@ -10,7 +10,13 @@ class BridgeStatus extends Model
 //    use HasFactory;
     protected $table = 'bridge_status';
 
-    protected $fillable = ['bridge_id', 'status_id', 'status', 'status_type'];
+    protected $fillable = [
+        
+        'bridge_id', 
+        'status_id', 
+        'status', 
+        'status_type'
+    ];
 
     public function bridge()
     {
