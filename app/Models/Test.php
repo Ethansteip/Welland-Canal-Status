@@ -13,4 +13,17 @@ class Test extends Model
 
     protected $fillable = ['bridge_name', 'bridge_status', 'bridge_id'];
 
+    public function raising() 
+    {
+
+        return $this->belongsTo(Test::class, 'bridge_status');
+    }
+
+
+    
+
+
+
+
+
 }
