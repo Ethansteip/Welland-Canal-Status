@@ -7,12 +7,20 @@ use App\Models\Test;
 
 class testService
 {
-    function findFirstInstance ($bridgeId, $bridgeStatus) {
+    public static function show()
+    {
+        $testRaising = Test::where('bridge_id', '5')->where('bridge_status', 'raising')->first();
 
-        $firstInstance = DB::table('test')->where('bridge_id', $bridgeId)->where('bridge_status', '$bridgeStatus')->first();
+        $testFullyRaised = Test::where('bridge_id', '5')->where('bridge_status', 'Fully Raised')->first();
+
+        $testRaise = intval($testRaising->status_time);
+        $testFull = intval($testFullyRaised->status_time);
+
+        $estimatedBridgeDuration = $testRaise - $testFull;
         
-        $nextPhase = DB::table('test')->where('bridge_id', '2')->where('bridge_status', 'Fully Raised')->first();
-        
-        
-        }
+        $finalDuration = date('Y-m-d H:i:s', $estimatedBridgeDuration); 
+
+        //return View('bridge.index', compact('testRaising'));
+        return $finalDuration;
+    }
 }

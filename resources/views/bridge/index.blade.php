@@ -4,6 +4,8 @@
 
 @section('content')
     <header class="title">
+
+    
         <h1>Welland Canal Bridge Status</h1>
     </header>
 
@@ -12,4 +14,11 @@
             @include('bridge.partials.bridge', compact('bridge'))
         @endforeach
     </div>
+    <div class='main'>
+        $include('bridge.partials.test', compact('finalDuration'))
+    </div>
+
+    
+
+    
 @endsection
