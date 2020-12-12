@@ -11,31 +11,32 @@ use App\Models\Test;
 
 class TestController extends Controller
 {
-    public function showDuration($id)
+    public function showDuration()
     {
 
-        $testRaising = Test::where('bridge_id', $id )->where('bridge_status', 'raising')->first();
+        $bridgeArr = [1, 2, 3, 4, 5, 6, 7];
 
-        $testFullyRaised = Test::where('bridge_id', $id)->where('bridge_status', 'Fully Raised')->first();
+        forEach($bridgeArr as $value)
+        {
 
-        $testRaise = intval($testRaising->status_time);
-        $testFull = intval($testFullyRaised->status_time);
+        $testRaising = Test::where('bridge_id', $value )->where('bridge_status', 'raising')->first();
+
+        $testFullyRaised = Test::where('bridge_id', $value)->where('bridge_status', 'Fully Raised')->first();
+
+        $testRaise = ($testRaising->status_time);
+        $testFull = ($testFullyRaised->status_time);
 
         $estimatedBridgeDuration = $testRaise - $testFull;
         
         $finalDuration = date('Y-m-d H:i:s', $estimatedBridgeDuration); 
 
-        $min = 1;
-        $max = 7;
+        
 
         //return View('bridge.index', compact('testRaising'));
 
-        if (($id < $min) && ($id > $max)) 
-        {
-            return 'Sorry, bridge duration not found';
-        } else {
-            return view('bridge.partials.test', compact('finalDuration'));
-        }
+        echo view('bridge.partials.test', compact('finalDuration'));
+        
+        };
 
         
     }

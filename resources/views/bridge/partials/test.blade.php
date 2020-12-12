@@ -1,3 +1,4 @@
 <div>
-    <h1>{{ $finalDuration }}<h1>
+    <h1>Bridge 1</h1>
+    <h2>{{ $finalDuration }}</h2>
 </div>

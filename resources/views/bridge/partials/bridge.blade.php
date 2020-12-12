@@ -12,6 +12,7 @@
     </div>
     <h6>{{ $bridge->name }}</h6>
     <h3>{{ $bridge->status->last()->status }}</h3>
+    <h3>{{ $bridge->duration }}</h3>
     
     
 </div>
