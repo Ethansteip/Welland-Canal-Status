@@ -14,10 +14,7 @@ class TestController extends Controller
     public function showDuration()
     {
 
-        $bridgeArr = [1, 2, 3, 4, 5, 6, 7];
-
-        forEach($bridgeArr as $value)
-        {
+        
 
         $testRaising = Test::where('bridge_id', $value )->where('bridge_status', 'raising')->first();
 
@@ -36,7 +33,7 @@ class TestController extends Controller
 
         echo view('bridge.partials.test', compact('finalDuration'));
         
-        };
+        
 
         
     }
