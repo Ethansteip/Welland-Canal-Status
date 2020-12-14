@@ -11,14 +11,12 @@ use App\Models\Test;
 
 class TestController extends Controller
 {
-    public function showDuration()
+    public function showDuration($id)
     {
 
-        
+        $testRaising = Test::where('bridge_id', $id )->where('bridge_status', 'raising')->first();
 
-        $testRaising = Test::where('bridge_id', $value )->where('bridge_status', 'raising')->first();
-
-        $testFullyRaised = Test::where('bridge_id', $value)->where('bridge_status', 'Fully Raised')->first();
+        $testFullyRaised = Test::where('bridge_id', $id)->where('bridge_status', 'Fully Raised')->first();
 
         $testRaise = ($testRaising->status_time);
         $testFull = ($testFullyRaised->status_time);
@@ -26,15 +24,13 @@ class TestController extends Controller
         $estimatedBridgeDuration = $testRaise - $testFull;
         
         $finalDuration = date('Y-m-d H:i:s', $estimatedBridgeDuration); 
-
+        
+        
         
 
         //return View('bridge.index', compact('testRaising'));
 
         echo view('bridge.partials.test', compact('finalDuration'));
-        
-        
-
-        
+           
     }
 }

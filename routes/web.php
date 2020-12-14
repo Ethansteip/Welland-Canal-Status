@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'BridgeController@index');
-Route::get('/test', 'TestController@showDuration');
+Route::get('/test/{id}', 'TestController@showDuration');
 
 
 Route::get('/testview', function()

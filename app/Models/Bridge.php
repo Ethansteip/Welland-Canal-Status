@@ -9,28 +9,13 @@ class Bridge extends Model
 {
 //    use HasFactory;
 
-    protected $table = 'test';
+    protected $table = 'bridge';
 
-    protected $fillable = ['bridge_id', 'bridge_status', 'status_time'];
+    protected $fillable = ['bridge_id', 'name', 'nickname', 'location', 'order', 'canal_id'];
 
     public function status()
     {
-        return $this->hasMany(Test::class, 'bridge_id');
+        return $this->hasMany(BridgeStatus::class, 'bridge_id');
     }
-
-    public function getDurationAttribute()
-    {
-        $testRaising = $this->status()->where('bridge_status', 'raising')->first();
-
-        $testFullyRaised = $this->status()->where('bridge_status', 'Fully Raised')->first();
-
-        $testRaise = ($testRaising->status_time);
-        $testFull = ($testFullyRaised->status_time);
-
-        $estimatedBridgeDuration = $testRaise - $testFull;
-        
-        $finalDuration = date('Y-m-d H:i:s', $estimatedBridgeDuration); 
-
-        return finalDuration;
-    }
+    
 }

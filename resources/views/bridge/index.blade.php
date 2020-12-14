@@ -14,9 +14,7 @@
             @include('bridge.partials.bridge', compact('bridge'))
         @endforeach
     </div>
-    <div class='main'>
-        $include('bridge.partials.test', compact('finalDuration'))
-    </div>
+    
 
     
 
