@@ -25,12 +25,12 @@ class TestController extends Controller
         
         $finalDuration = date('Y-m-d H:i:s', $estimatedBridgeDuration); 
         
-        
+
         
 
-        //return View('bridge.index', compact('testRaising'));
+        return $finalDuration;
 
-        echo view('bridge.partials.test', compact('finalDuration'));
+        //echo view('bridge.partials.test', compact('finalDuration'));
            
     }
 }
