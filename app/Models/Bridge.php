@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+
 //use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,4 +19,42 @@ class Bridge extends Model
         return $this->hasMany(BridgeStatus::class, 'bridge_id');
     }
     
+    public function getDurationAttribute()
+    {
+       
+        $testRaising = $this->status()
+            ->where('status', 'Raised')
+            ->latest()
+            ->first();
+        
+        if ($testRaising === null) {
+            return 'no raising';
+        }
+
+        $testFullyRaised = $this->status()
+            ->where('status', 'like', 'Fully Raised%')
+            ->where('id', '>', $testRaising->id)
+            ->first();
+
+        
+        if ($testFullyRaised === null)
+        {
+            return "no raise";
+        }
+        
+        $testRaise = ($testRaising->created_at);
+        $testFull = ($testFullyRaised->created_at);
+
+
+
+
+        //ddd($testFull);
+
+        //$estimatedBridgeDuration = $testRaise - $testFull;
+        
+        
+        //$finalDuration = date('Y-m-d H:i:s', $estimatedBridgeDuration); 
+
+        return $testFull->diffForHumans($testRaise);
+    }
 }

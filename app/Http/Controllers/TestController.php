@@ -14,23 +14,34 @@ class TestController extends Controller
     public function showDuration($id)
     {
 
-        $testRaising = Test::where('bridge_id', $id )->where('bridge_status', 'raising')->first();
+        $testRaising = BridgeStatus::where('bridge_id', $id )
+            ->where('status', 'Raising')
+            ->first();
 
-        $testFullyRaised = Test::where('bridge_id', $id)->where('bridge_status', 'Fully Raised')->first();
+        $testFullyRaised = BridgeStatus::where('bridge_id', $id)
+            ->where('status', 'like', 'Fully Raised%')
+            ->where('id', '>', $testRaising->id)
+            ->first();
 
-        $testRaise = ($testRaising->status_time);
-        $testFull = ($testFullyRaised->status_time);
+        $testRaise = ($testRaising->created_at);
+        $testFull = ($testFullyRaised->created_at);
 
-        $estimatedBridgeDuration = $testRaise - $testFull;
+        //ddd($testFull);
+
+        //$estimatedBridgeDuration = $testRaise - $testFull;
         
-        $finalDuration = date('Y-m-d H:i:s', $estimatedBridgeDuration); 
         
+        //$finalDuration = date('Y-m-d H:i:s', $estimatedBridgeDuration); 
 
+        ddd($testFull->diffForHumans($testRaise));
+
+
+
+       
         
+        //return $finalDuration;
 
-        return $finalDuration;
-
-        //echo view('bridge.partials.test', compact('finalDuration'));
+        echo view('bridge.partials.test', compact('finalDuration'));
            
     }
 }

@@ -17,4 +17,9 @@ class BridgeController extends Controller
 
         return View::make('bridge.index', compact('bridges'));
     }
+
+    public function show(Bridge $bridge)
+    {
+        ddd($bridge);
+    }
 }

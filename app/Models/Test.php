@@ -16,7 +16,7 @@ class Test extends Model
     public function raising() 
     {
 
-        return $this->hasMany(Test::class, 'bridge_id');
+        return $this->belongsTo(Test::class, 'bridge_id');
     }
 
 
