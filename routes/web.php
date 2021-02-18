@@ -18,6 +18,12 @@ Route::get('/test/{id}', 'TestController@showDuration');
 
 Route::get('bridge/{bridge}', 'BridgeController@show');
 
+//Testing bootstrap cards for new BridgeController view
+Route::get('/bootstrap', function()
+{
+    return view('bootstrap');
+});
+
 
 Route::get('/testview', function()
 {
