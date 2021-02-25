@@ -57,4 +57,27 @@ class Bridge extends Model
 
         return $testFull->diffForHumans($testRaise);
     }
+
+    public function getHistoryAttribute()
+    {
+        //select a bridge
+        $raising = $this->status()
+            ->where('status', 'Raising')
+            ->first();
+
+        return $raising->created_at->diffForHumans();
+
+        
+        //find the all instances of the bridge status changing in the last 24 hours
+        //for each of those instances return the bridge name, id, status, timestamp;
+    }
+
+    public function getRaisingHistory()
+    {
+        $raise = Bridge::all();
+
+        $raise->where('status', 'Raising')->get();
+
+        return $raise->created_at;
+    }
 }

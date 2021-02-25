@@ -26,22 +26,12 @@ class TestController extends Controller
         $testRaise = ($testRaising->created_at);
         $testFull = ($testFullyRaised->created_at);
 
-        //ddd($testFull);
 
-        //$estimatedBridgeDuration = $testRaise - $testFull;
-        
-        
-        //$finalDuration = date('Y-m-d H:i:s', $estimatedBridgeDuration); 
+        $finalDuration = $testFull->diffForHumans($testRaise);
 
-        ddd($testFull->diffForHumans($testRaise));
+        //return $finalDuration to view;
 
-
-
-       
-        
-        //return $finalDuration;
-
-        echo view('bridge.partials.test', compact('finalDuration'));
+        return view('bridge.partials.test', compact('finalDuration'));
            
     }
 }

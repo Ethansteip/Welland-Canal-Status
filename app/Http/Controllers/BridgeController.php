@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Bridge;
 use App\Models\BridgeStatus;
+
 use App\Services\BridgeStatusService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
@@ -20,6 +21,7 @@ class BridgeController extends Controller
 
     public function show(Bridge $bridge)
     {
-        ddd($bridge);
+
+        return view('bridge.show', compact('bridge'));
     }
 }

@@ -13,22 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+//Shows all bridges with current status
 Route::get('/', 'BridgeController@index');
+
 Route::get('/test/{id}', 'TestController@showDuration');
 
-Route::get('bridge/{bridge}', 'BridgeController@show');
-
-//Testing bootstrap cards for new BridgeController view
-Route::get('/bootstrap', function()
-{
-    return view('bootstrap');
-});
-
-
-Route::get('/testview', function()
-{
-    return view('welcome');
-});
+Route::get('/bridge/{bridge}', 'BridgeController@show');
 
 
 

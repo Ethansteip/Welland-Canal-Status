@@ -1,18 +1,17 @@
-<div class="mydiv" class="one">
+
+<div class="card bg-light mb-3 my-3 mx-4" style="min-width: 20rem; box-shadow: 0 6px 6px rgba(0,0,0,0.1);">
     @if ($bridge->status->last()->status === "Available")
-        <div class="available">
+        <div class="card-header" style='background: rgb(129, 210, 199);'>{{ $bridge->name }}</div>
     @elseif ($bridge->status->last()->status === "Raising Soon")
-        <div class="raisingsoon">
+        <div class="card-header" style='background: rgb(181, 186, 208);'>{{ $bridge->name }}</div>
     @elseif ($bridge->status->last()->status === "--Work in Progress--")
-        <div class="wip">
+        <div class="card-header" style='background: rgb(115, 137, 174);'>{{ $bridge->name }}</div>
     @else
-        <div class="fullyraised">
+        <div class="card-header" style='background: rgb(65, 103, 136);'>{{ $bridge->name }}</div>
     @endif
-        <h2>{{ $bridge->location }}</h2>
+    <div class="card-body bg-light">
+        <h5 class="card-title text-dark">{{ $bridge->location }}</h5>
+        <p class="card-text text-dark">{{ $bridge->status->last()->status }}</p>
+        <a href="bridge/{{ $bridge->id }}" class="btn btn-info">View</a>
     </div>
-    <h6>{{ $bridge->name }}</h6>
-    <h3>{{ $bridge->status->last()->status }}</h3>
-    <h3>{{ $bridge->duration }}</h3>
-    
-    
 </div>
