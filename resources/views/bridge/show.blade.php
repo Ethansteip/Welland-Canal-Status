@@ -35,9 +35,30 @@
                 <div class='row'>
                     <div class='col'>
                         <h4>
-                           {{ $bridge->raising }}
+                           {{ $duration }}
                         </h4>
 
+                    </div>
+                    <div class="container">
+                        <table class='table'>
+                            <tbody
+                        @foreach ($bridgeStatus as $status)
+                            <TR>
+                                <td>
+                                {{ $status->id }}
+                                </td>
+                                <td>
+                                    {{ $status->status }}
+                                </td>
+                                <td>
+                                    {{ $status->created_at }}
+                                </td>
+                            </TR>
+                        @endforeach
+                        </tbody>
+                        
+                        </table>
+                        {{ $bridgeStatus->links() }}
                     </div>
                     
                 </div>

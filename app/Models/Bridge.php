@@ -53,7 +53,7 @@ class Bridge extends Model
         //$estimatedBridgeDuration = $testRaise - $testFull;
         
         
-        //$finalDuration = date('Y-m-d H:i:s', $estimatedBridgeDuration); 
+        $finalDuration = date('Y-m-d H:i:s', $estimatedBridgeDuration); 
 
         return $testFull->diffForHumans($testRaise);
     }

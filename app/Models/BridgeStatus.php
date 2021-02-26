@@ -18,6 +18,17 @@ class BridgeStatus extends Model
         'status_type'
     ];
 
+
+    const STATUS_RAISING = 'Raising';
+    const STATUS_AVAILABLE = 'Available';
+    const VALID_STATUS = [
+        self::STATUS_RAISING,
+        self::STATUS_AVAILABLE,
+
+    ];
+    
+
+
     public function bridge()
     {
         return $this->belongsTo(Bridge::class, 'bridge_id');
@@ -29,4 +40,6 @@ class BridgeStatus extends Model
 
         return $raise;
     }
+
+
 }
