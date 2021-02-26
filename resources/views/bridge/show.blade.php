@@ -19,7 +19,7 @@
                 <div class="card shadow bg-light">
                     <div class="card-body">
                     <h3 class="card-title text-center text-secondary">Current Status</h3>
-                    <h4 class="card-text text-secondary font-weight-bold text-center pb-md-2">{{ $bridge->status->last()->status }}</h4>
+                    <h4 class="card-text text-secondary font-weight-bold text-center pb-md-2 text-success">{{ $bridge->status->last()->status }}</h4>
                     </div>
                 </div>
             </div>
@@ -31,8 +31,16 @@
                     </div>
                 </div>
             </div>
-            <div>
-                {{ $bridge->raising }}
+            <div class='container'>
+                <div class='row'>
+                    <div class='col'>
+                        <h4>
+                           {{ $bridge->raising }}
+                        </h4>
+
+                    </div>
+                    
+                </div>
             </div>
 
     </div>

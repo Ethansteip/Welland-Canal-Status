@@ -72,12 +72,13 @@ class Bridge extends Model
         //for each of those instances return the bridge name, id, status, timestamp;
     }
 
-    public function getRaisingHistory()
+    public function getRaisingAttribute()
     {
-        $raise = Bridge::all();
+        $raising = $this->status()
+            ->where('status', 'Raising')
+            ->latest()
+            ->first();
 
-        $raise->where('status', 'Raising')->get();
-
-        return $raise->created_at;
+        return $raising;
     }
 }

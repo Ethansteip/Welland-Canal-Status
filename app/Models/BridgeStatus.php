@@ -22,4 +22,11 @@ class BridgeStatus extends Model
     {
         return $this->belongsTo(Bridge::class, 'bridge_id');
     }
+
+    public function getRaisingHistory()
+    {
+        $raise = Bridge::all()->get();
+
+        return $raise;
+    }
 }
