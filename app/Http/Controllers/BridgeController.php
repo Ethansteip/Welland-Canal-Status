@@ -26,7 +26,9 @@ class BridgeController extends Controller
         
 
         $bridgeStatus = $bridge->status()
-            ->paginate(10);
+            ->orderBy('id', 'desc')
+            ->paginate(15)
+            ->onEachSide(3);
 
 
         return view('bridge.show', compact('bridge', 'bridgeStatus', 'duration'));

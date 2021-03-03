@@ -75,7 +75,7 @@ class testService {
             return 0;
         }
 
-        return $totalTime / $events;
+        return round(($totalTime / 60), 2) / $events;
 
         }
     }
